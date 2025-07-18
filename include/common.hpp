@@ -7,7 +7,7 @@
 #define CUDA_CHECK(errMsg) do {\
     if (errMsg != cudaSuccess) {\
         std::cerr << "CUDA ERROR MSG: " << cudaGetErrorString(errMsg) << " (LINE: " << __LINE__ << ")" << std::endl;\
-        return EXIT_FAILURE;\
+        exit(1);\
     }\
 } while (0)
 
